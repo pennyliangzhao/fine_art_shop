@@ -36,7 +36,7 @@
                 <button class="nav-bar-buttons"
                 onclick="document.getElementById('id03').style.display='block'" style="width:auto;">
                 Shopping Cart<i class="fa fa-shopping-cart"></i>
-                    
+
                 </button>
             </div>
         </div>

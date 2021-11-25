@@ -42,7 +42,7 @@
 <!--login window-->
 <div id="id01" class="modal">
 
-    <form class="modal-content animate" action="/action_page.php" method="post">
+    <form class="modal-content animate" action="services/login.php" method="post">
 
         <div class="container">
             <label for="uname"><b>Username</b></label>

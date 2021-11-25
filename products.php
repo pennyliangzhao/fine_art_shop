@@ -1,3 +1,6 @@
+<?php
+    require('services/db-config.php');
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,16 +31,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <input type="text" placeholder="Search..">
+
                 <!--                <button class="nav-bar-buttons" onclick="document.getElementById('login').style.display='block'">Login-->
                 <!--                </button>-->
                 <!--                <button class="nav-bar-buttons" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign up-->
                 <!--                </button>-->
-                <button class="nav-bar-buttons"
-                onclick="document.getElementById('id03').style.display='block'" style="width:auto;">
-                Shopping Cart<i class="fa fa-shopping-cart"></i>
-
-                </button>
+<!--                <button class="nav-bar-buttons"-->
+<!--                onclick="document.getElementById('id03').style.display='block'" style="width:auto;">-->
+<!--                Shopping Cart-->
+<!--                </button>-->
+                <?php include("cartbutton.php");?>
             </div>
         </div>
     </div>
@@ -94,89 +97,29 @@
 </div>
 
 <div class="featured container no-gutter">
-
     <div class="row posts">
-        <div id="1" class="item new col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item1.webp" alt="">
-                    <h4>Surfboards</h4>
-                    <h6>$15.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="2" class="item high col-md-4">
-            <a href="single-product2.php">
-                <div class="featured-item">
-                    <img src="assets/images/item2.webp" alt="">
-                    <h4>Denim Summer 18 Jacket</h4>
-                    <h6>$25.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="3" class="item low col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item3.webp" alt="">
-                    <h4>Fat Cactus</h4>
-                    <h6>$35.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="4" class="item low col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item4.webp" alt="">
-                    <h4>Banana Leaves</h4>
-                    <h6>$45.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="5" class="item new high col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item5.webp" alt="">
-                    <h4>Prickly Cactus</h4>
-                    <h6>$55.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="6" class="item new col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item6.webp" alt="">
-                    <h4>Summer Umbrella</h4>
-                    <h6>$65.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="7" class="item new high col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item7.webp" alt="">
-                    <h4>Love Bite Apple</h4>
-                    <h6>$75.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="8" class="item low new col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item8.webp" alt="">
-                    <h4>Snow White & Friends</h4>
-                    <h6>$85.00</h6>
-                </div>
-            </a>
-        </div>
-        <div id="9" class="item new col-md-4">
-            <a href="single-product1.php">
-                <div class="featured-item">
-                    <img src="assets/images/item9.webp" alt="">
-                    <h4>Hipster Puppi</h4>
-                    <h6>$95.00</h6>
-                </div>
-            </a>
-        </div>
+    <!--Populate products table with items-->
+        <?php
+        $sql = "SELECT * FROM products";
+        $result = $conn->query($sql);
+
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+        echo '<div id="1" class="item new col-md-4">' .
+            '<a href="single-product1.php">'.
+                '<div class="featured-item">'.
+                    '<img src=".'.$row['image_path'].'." alt="">'.
+                    '<h4>'.$row['item'].'</h4>'.
+                    '<h6>$'.$row['price'].'</h6>'.
+                '</div>'.
+            '</a>'.
+        '</div>';
+            }
+        } else {
+            echo '<div><h3>Sorry no products found</h3></div>';
+        }
+        $conn->close();
+        ?>
     </div>
 </div>
 

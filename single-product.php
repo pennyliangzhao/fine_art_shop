@@ -1,20 +1,21 @@
+<?php
+require('services/db-config.php');
+session_start();
+if(!isset($_SESSION['username'])) {
+    header("Location: error.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-    <title>Product2 Detail</title>
-
+    <title>Product1 Detail</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -29,15 +30,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <input type="text" placeholder="Search..">
+                <?php include("cartbutton.php");?>
+                <!--                <input type="text" placeholder="Search..">-->
                 <!--                <button class="nav-bar-buttons" onclick="document.getElementById('login').style.display='block'">Login-->
                 <!--                </button>-->
-                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('signup').style.display='block'"-->
-                <!--                        style="width:auto;">Sign up-->
+                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign up-->
                 <!--                </button>-->
-                <button class="nav-bar-buttons" onclick="document.getElementById('shopping_cart').style.display='block'"
-                        style="width:auto;">
-                    Shopping cart<i class="fa fa-shopping-cart"></i></button>
+                <!--                <button class="nav-bar-buttons" "onclick="document.getElementById('shopping_cart').style.display='block'" style="width:auto;">-->
+                <!--                Shopping Cart<i class="fa fa-shopping-cart"></i>-->
+                </button>
             </div>
         </div>
     </div>
@@ -71,6 +72,7 @@
     </div>
 </nav>
 
+
 <!-- Page Content -->
 <!-- Single Starts Here -->
 <div class="about-page">
@@ -79,39 +81,53 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <div class="line-dec"></div>
-                    <h1></h1>
+                    <h1> </h1>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="left-image">
-                    <img src="assets/images/item2.webp" alt="">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="right-content">
-                    <h4>Denim Summer 18 Jacket</h4>
-                    <h6>$25.00</h6>
-                    <p> Penny crafted an art piece that captures the essence of a fun and hot summer. The green pastel
-                        tones are reminicent of a cool, calm drink in a hot humid climate - a reflection of Penny's life
-                        in Fiji and move back to New Zealand for a Summer Christmas. </p>
-                    <span>7 left on stock</span>
-                    <br>
-                    <form action="" method="get">
-                        <label for="quantity">Quantity:</label>
-                        <input name="quantity" type="quantity" class="quantity-text" id="quantity"
-                               onfocus="if(this.value == '1') { this.value = ''; }"
-                               onBlur="if(this.value == '') { this.value = '1';}"
-                               value="1">
-                        <input type="submit" class="button" value="Order Now!">
-                    </form>
-                    <div class="down-content">
-                        <div class="categories">
-                            <h6>Category: <span><a href="#">Holiday</a>,<a href="#">Joy</a>,<a
-                                            href="#">Lifestyle</a></span></h6>
+                    <?php
+                        $sql = "SELECT * FROM products WHERE id=?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("i", $_GET['id']);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        $row = $result->fetch_assoc();
+                  echo  '<img src=".' . $row['image_path'] . '." alt="">' .
+               ' </div>'.
+            '</div>'.
+            '<div class="col-md-6">'.
+                '<div id="single-product-section" data-uname='.$_SESSION['username'].' class="right-content">'.
+                        '<h4 id="item-name">'.$row['item'].'</h4>'.
+                            '<h6 class="d-inline-block">$</h6><h6 class="d-inline-block" id="price">'.$row['price'].'</h6>'.
+                            '<p>'.$row['description'].'</p>'.
+                            '<span id="quantity">'.$row['quantity'].'  left on stock</span>'.
+                    '<br>'.
+                    ' <div>'.
+                    '<label for="quantity">Quantity:</label>'.
+                    ' <input id="quantity_p" name="quantity" type="quantity" class="quantity-text"'.
+                    'onfocus="if(this.value == '.$row['quantity'].') { this.value = '.$row['quantity'].'; }"'.
+                    'onBlur="if(this.value == '.$row['quantity'].') { this.value = '.$row['quantity'].';}"'.
+                    'value="1">'.
+                    ' <button class="btn btn-primary" id="order-now">Order Now!</button>'.
+                    ' </div>'.
+                    ' <div class="down-content">'.
+                    ' <div class="categories">'.
+                    ' <h6>Category: '.$row['categories'].'</h6>';
+                    ?>
+<!--                    ?>-->
+<!--                    <h4>Surfboards</h4>-->
+<!--                    <h6>$15.00</h6>-->
+<!--                    <p> Penny crafted an art piece that captures the essence of a fun and hot summer. The green pastel-->
+<!--                        tones are reminicent of a cool, calm drink in a hot humid climate - a reflection of Penny's life-->
+<!--                        in Fiji and move back to New Zealand for a Summer Christmas. </p>-->
+<!--                    <span>7 left on stock</span>-->
+
+
                         </div>
                         <div class="share">
                             <h6>Share: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
-                                                class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span>
+                                            class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span>
                             </h6>
                         </div>
                     </div>
@@ -123,7 +139,6 @@
 </div>
 <!-- Single Page Ends Here -->
 
-
 <!-- Subscribe Form Starts Here -->
 <div class="subscribe-form">
     <div class="container">
@@ -131,7 +146,7 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <div class="line-dec"></div>
-                    <h1>Subscribe on PIXIE now!</h1>
+                    <h1>Subscribe now!</h1>
                 </div>
             </div>
             <div class="col-md-8 offset-md-2">
@@ -215,8 +230,9 @@
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
-
+<script src="vendor/scripts/order-product.js"></script>
 
 </body>
 
 </html>
+

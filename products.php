@@ -89,7 +89,7 @@
                     <button class="btn btn-primary" data-filter="*">All Products</button>
                     <button class="btn btn-primary" data-filter=".new">Newest</button>
                     <button class="btn btn-primary" data-filter=".low">Low Price</button>
-                    <button class="btn btn-primary" data-filter=".high">Hight Price</button>
+                    <button class="btn btn-primary" data-filter=".high">High Price</button>
                 </div>
             </div>
         </div>
@@ -106,7 +106,8 @@
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
         echo '<div id="1" class="item new col-md-4">' .
-            '<a href="single-product1.php">'.
+            '<a href="single-product.php?id='.$row['id'].'">' .
+
                 '<div class="featured-item">'.
                     '<img src=".'.$row['image_path'].'." alt="">'.
                     '<h4>'.$row['item'].'</h4>'.
@@ -137,7 +138,7 @@
         </div>
     </div>
 </div>
-<!-- Featred Page Ends Here -->
+<!-- Featured Page Ends Here -->
 
 
 <!-- Subscribe Form Starts Here -->

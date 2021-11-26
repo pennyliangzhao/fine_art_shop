@@ -927,7 +927,7 @@ width: auto;
 a.button-link{
     background-color: #555;
     border-radius: 5px;
-    padding: 10px 15px;
+    /*padding: 10px 15px;*/
     display: inline-block;
     color: #fff;
     font-size: 14px;

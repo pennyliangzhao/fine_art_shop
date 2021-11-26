@@ -33,11 +33,11 @@ session_start();
                     echo '<button class="nav-bar-buttons" onclick="document.getElementById(\'id01\').style.display=\'block\'">Login <i class="fa fa-sign-in"></i></button>'.
 
                         '<button class="nav-bar-buttons" onclick="document.getElementById(\'id02\').style.display=\'block\'">Sign up<i class="fa fa-user-plus"></i></button>';
+                }else{
+                   echo '<a class="button-link" href="services/logout.php">logout<i class="fa fa-sign-out"></i></a>';
+
                 }
                 ?>
-                <!--                <button onclick="document.getElementById('shopping_cart').style.display='block'" style="width:auto;">-->
-                <!--                    Shopping Cart<i class="fa fa-shopping-cart"></i>-->
-                <!--                </button>-->
 
             </div>
         </div>

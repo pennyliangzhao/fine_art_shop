@@ -189,11 +189,11 @@ if(!isset($_SESSION['username'])) {
             <div class="col-md-12">
                 <div class="footer-menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#">Help</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">How It Works ?</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
             </div>

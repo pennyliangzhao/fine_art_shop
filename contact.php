@@ -30,14 +30,14 @@
         <div class="row">
             <div class="col-md-12">
                 <?php include("cartbutton.php");?>
-<!--                <input type="text" placeholder="Search..">-->
+                <!--                <input type="text" placeholder="Search..">-->
                 <!--                <button class="nav-bar-buttons" onclick="document.getElementById('login').style.display='block'">Login-->
                 <!--                </button>-->
                 <!--                <button class="nav-bar-buttons" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign up-->
                 <!--                </button>-->
-<!--                <button class="nav-bar-buttons"-->
-<!--                "onclick="document.getElementById('shopping_cart').style.display='block'" style="width:auto;">-->
-<!--                Shopping Cart<i class="fa fa-shopping-cart"></i>-->
+                <!--                <button class="nav-bar-buttons"-->
+                <!--                "onclick="document.getElementById('shopping_cart').style.display='block'" style="width:auto;">-->
+                <!--                Shopping Cart<i class="fa fa-shopping-cart"></i>-->
                 </button>
             </div>
         </div>

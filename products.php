@@ -46,32 +46,33 @@
     </div>
 </div>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<div>
     <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
-                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="products.php">Products
+                    <a class="nav-link" href="index.php">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.php">About</a>
+                    <a class="nav-link" href="products.php">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
+                    <a class="nav-link" href="about.php">About </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact </a>
+                </li>
+
+                <li class="nav-item">
+                    <form action="/action_page.php">
+                <li class="nav-item">
             </ul>
-        </div>
     </div>
-</nav>
+    </nav>
+</div>
 
 <!-- Page Content -->
 <!-- Items Starts Here -->
@@ -189,11 +190,11 @@
             <div class="col-md-12">
                 <div class="footer-menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#">Help</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">How It Works ?</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -231,7 +232,7 @@
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<script src="assets/js/custom.js"></script>
 
 </body>
 

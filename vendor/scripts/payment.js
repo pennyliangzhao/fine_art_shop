@@ -1,9 +1,13 @@
-// Get the modal
-var modal = document.getElementById('id03');
+const checkout = document.getElementById('checkout');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+checkout.addEventListener('click', ()=>{
+    let urlParams = window.location.search;
+    //let data = {username: productSection.dataset.uname, item: itemName.innerText, price: price.innerText, quantity: quantity.value};
+    // order('/fine_art_shop/services/order.php', data).then((response)=>{
+    //     console.log(response);
+    //     if(response['message'] === 'order-added-successfully') {
+    //         //Show the success dialog
+    //     }
+    // });
+});
+

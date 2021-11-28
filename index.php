@@ -29,12 +29,12 @@ session_start();
         <div class="row">
             <div class="col-md-12">
                 <?php
-                if (!isset($_SESSION['logged_in'])) {
-                    echo '<button class="nav-bar-buttons" onclick="document.getElementById(\'id01\').style.display=\'block\'">Login <i class="fa fa-sign-in"></i></button>' .
+                if(!isset($_SESSION['logged_in'])) {
+                    echo '<button class="nav-bar-buttons" onclick="document.getElementById(\'id01\').style.display=\'block\'">Login <i class="fa fa-sign-in"></i></button>'.
 
                         '<button class="nav-bar-buttons" onclick="document.getElementById(\'id02\').style.display=\'block\'">Sign up<i class="fa fa-user-plus"></i></button>';
-                } else {
-                    echo '<a class="button-link" href="services/logout.php">logout<i class="fa fa-sign-out"></i></a>';
+                }else{
+                   echo '<a class="button-link" href="services/logout.php">logout<i class="fa fa-sign-out"></i></a>';
 
                 }
                 ?>
@@ -110,7 +110,7 @@ session_start();
 
 <!-- Banner Starts Here -->
 <div class="header">
-    <h2><span class="span">PENNY'S</span> FINE ART PRINTS</h2>
+    <h2 class="h2"><span class="span">PENNY'S</span> FINE ART PRINTS</h2>
     <h1 class="h1">SHOP</h1>
 
     <p class="p1">THE ART OF LIVING</p>
@@ -121,60 +121,60 @@ session_start();
 <div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-            <!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="products.php">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.php">About </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact </a>
-                </li>
+<!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.php">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact </a>
+                    </li>
 
-                <li class="nav-item">
-                    <form action="/action_page.php">
-                <li class="nav-item">
-            </ul>
+                    <li class="nav-item">
+                        <form action="/action_page.php">
+                    <li class="nav-item">
+                </ul>
+            </div>
+        </nav>
     </div>
-    </nav>
-</div>
 
-<!-- Featured Ends Here -->
-<div class="featured container no-gutter">
-    <div class="row posts">
-        <!--Populate products table with items-->
-        <?php
-        $sql = "SELECT * FROM products";
-        $result = $conn->query($sql);
+                    <!-- Featured Ends Here -->
+                    <div class="featured container no-gutter">
+                        <div class="row posts">
+                            <!--Populate products table with items-->
+                            <?php
+                            $sql = "SELECT * FROM products";
+                            $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo '<div id="1" class="item new col-md-4">' .
-                    '<a href="single-product.php?id=' . $row['id'] . '">' .
-                    '<div class="featured-item">' .
-                    '<img src=".' . $row['image_path'] . '." alt="">' .
-                    '</div>' .
-                    '</a>' .
-                    '</div>';
-            }
-        } else {
-            echo '<div><h3>Sorry no products found</h3></div>';
-        }
-        $conn->close();
-        ?>
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<div id="1" class="item new col-md-4">' .
+                                        '<a href="single-product.php?id='.$row['id'].'">' .
+                                        '<div class="featured-item">' .
+                                        '<img src=".' . $row['image_path'] . '." alt="">' .
+                                        '</div>' .
+                                        '</a>' .
+                                        '</div>';
+                                }
+                            } else {
+                                echo '<div><h3>Sorry no products found</h3></div>';
+                            }
+                            $conn->close();
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 
 <!-- Footer Starts Here -->

@@ -1,33 +1,33 @@
  Full-width input fields
 input[type=text], input[type=password] {
     /*width: 100%;*/
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    /*padding: 15px;*/
+    /*margin: 5px 0 22px 0;*/
     display: inline-block;
-    border: none;
-    background: #f1f1f1;
+    /*border: none;*/
+    /*background: #f1f1f1;*/
 }
 
- Add a background color when the inputs get focus
-input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
+Add a background color when the inputs get focus
+input[type=text]:focus, input[type=text]:focus, input[type=password]:focus {
+ background-color: #ddd;
+ outline: none;
 }
 
- Set a style for all buttons
+Set a style for all buttons
 button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
+ background-color: #04AA6D;
+ color: white;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 100%;
+ opacity: 0.9;
 }
 
 button:hover {
-    opacity:1;
+ opacity:1;
 }
 
 /* Extra styles for the cancel button */
@@ -57,7 +57,8 @@ button:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
+    /*background-color: #474e5d;*/
+    background-image: url("../images/footerimage.jfif");
     padding-top: 50px;
 }
 

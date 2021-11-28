@@ -31,13 +31,7 @@ if(!isset($_SESSION['username'])) {
         <div class="row">
             <div class="col-md-12">
                 <?php include("cartbutton.php");?>
-                <!--                <input type="text" placeholder="Search..">-->
-                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('login').style.display='block'">Login-->
-                <!--                </button>-->
-                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign up-->
-                <!--                </button>-->
-                <!--                <button class="nav-bar-buttons" "onclick="document.getElementById('shopping_cart').style.display='block'" style="width:auto;">-->
-                <!--                Shopping Cart<i class="fa fa-shopping-cart"></i>-->
+
                 </button>
             </div>
         </div>
@@ -105,7 +99,7 @@ if(!isset($_SESSION['username'])) {
                     '<br>'.
                     ' <div>'.
                     '<label for="quantity">Quantity:</label>'.
-                    ' <input id="quantity_p" name="quantity" type="quantity" class="quantity-text"'.
+                    ' <input type="number" min="1" id="quantity_p" name="quantity" type="quantity" class="quantity-text"'.
                     'onfocus="if(this.value == '.$row['quantity'].') { this.value = '.$row['quantity'].'; }"'.
                     'onBlur="if(this.value == '.$row['quantity'].') { this.value = '.$row['quantity'].';}"'.
                     'value="1">'.

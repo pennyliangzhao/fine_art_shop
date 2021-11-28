@@ -1,6 +1,9 @@
 <?php
 require('services/db-config.php');
 session_start();
+if(!isset($_SESSION['username'])) {
+    header("Location: error.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,34 +21,13 @@ session_start();
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/signup.css">
 </head>
-<!-- Pre Header -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <?php
-                if(!isset($_SESSION['logged_in'])) {
-                    echo '<button class="nav-bar-buttons" onclick="document.getElementById(\'id01\').style.display=\'block\'">Login <i class="fa fa-sign-in"></i></button>'.
 
-                        '<button class="nav-bar-buttons" onclick="document.getElementById(\'id02\').style.display=\'block\'">Sign up<i class="fa fa-user-plus"></i></button>';
-                }else{
-                    echo '<a class="button-link" href="services/logout.php">logout<i class="fa fa-sign-out"></i></a>';
-
-                }
-                ?>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Navigation -->
-<div>
-    <div class="container">
+    <div class="container1">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
             <!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item active1">
                     <a class="nav-link" href="index.php">Home
                         <span class="sr-only">(current)</span>
                     </a>
@@ -60,9 +42,9 @@ session_start();
                     <a class="nav-link" href="contact.php">Contact </a>
                 </li>
 
-                <li class="nav-item">
-                    <form action="/action_page.php">
-                <li class="nav-item">
+<!--                <li class="nav-item">-->
+<!--                    <form action="/action_page.php">-->
+<!--                <li class="nav-item">-->
             </ul>
     </div>
     </nav>
@@ -75,27 +57,26 @@ session_start();
     <div class="col-75">
         <div class="container">
             <div>
-
                 <div class="row">
                     <div class="col-50">
                         <h3>Billing Address</h3>
                         <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe"><br>
                         <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                        <input type="text" id="email" name="email" placeholder="john@example.com">
+                        <input type="text" id="email" name="email" placeholder="john@example.com"><br>
                         <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                        <input type="text" id="adr" name="address" placeholder=" 40 Taranaki Street, Te Aro"><br>
                         <label for="city"><i class="fa fa-institution"></i> City</label>
-                        <input type="text" id="city" name="city" placeholder="New York">
+                        <input type="text" id="city" name="city" placeholder="Wellington">
 
                         <div class="row">
                             <div class="col-50">
                                 <label for="state">State</label>
-                                <input type="text" id="state" name="state" placeholder="NY">
+                                <input type="text" id="state" name="state" placeholder="NZ">
                             </div>
                             <div class="col-50">
                                 <label for="zip">Zip</label>
-                                <input type="text" id="zip" name="zip" placeholder="10001">
+                                <input type="text" id="zip" name="zip" placeholder="6011">
                             </div>
                         </div>
                     </div>
@@ -110,15 +91,15 @@ session_start();
                             <i class="fa fa-cc-discover" style="color:orange;"></i>
                         </div>
                         <label for="cname">Name on Card</label>
-                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                        <input type="text" id="cname" name="cardname" placeholder=" John More Doe"><br>
                         <label for="ccnum">Credit card number</label>
-                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"><br>
                         <label for="expmonth">Exp Month</label>
-                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                        <input type="text" id="expmonth" name="expmonth" placeholder="December">
                         <div class="row">
                             <div class="col-50">
                                 <label for="expyear">Exp Year</label>
-                                <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                <input type="text" id="expyear" name="expyear" placeholder="2022">
                             </div>
                             <div class="col-50">
                                 <label for="cvv">CVV</label>

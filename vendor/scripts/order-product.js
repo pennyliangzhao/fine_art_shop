@@ -6,9 +6,18 @@ const productSection = document.getElementById('single-product-section');
 const checkout = document.getElementById('checkout');
 if(orderNow) {
    orderNow.addEventListener('click', () => {
-      let data = {username: productSection.dataset.uname, item: itemName.innerText, price: price.innerText, quantity: quantity.value};
-      localStorage.setItem('order-data', JSON.stringify(data));
-      window.location.href = '/fine_art_shop/payment.php';
+      if(quantity.value > 0) {
+         let data = {
+            username: productSection.dataset.uname,
+            item: itemName.innerText,
+            price: price.innerText,
+            quantity: quantity.value
+         };
+         localStorage.setItem('order-data', JSON.stringify(data));
+         window.location.href = '/fine_art_shop/payment.php';
+      } else {
+         alert('The quantity should be larger than 0');
+      }
    });
 }
 

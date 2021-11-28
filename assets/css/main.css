@@ -59,6 +59,12 @@ h2{
     font-size: 2rem;
     margin-left:60px;
 }
+
+.h2{
+    font-family: Copperplate;
+    font-size: 1.8rem;
+    margin-left:60px;
+}
 .p1 {
     font-family: Papyrus;
     font-size: x-large;
@@ -158,7 +164,7 @@ h2{
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .show > .nav-link {
-    color: #555;
+    color: #FFB6C1;
 }
 
 .navbar:after {
@@ -806,7 +812,7 @@ h2{
 }
 .contact-page .right-content .button {
     cursor: pointer;
-    background-color: #3a8bcd;
+    background-color:#EEB4B4;
     outline: none;
     border-radius: 5px;
     padding: 10px 15px;
@@ -943,4 +949,8 @@ a.button-link{
 }
 .fa-shopping-cart{
     margin-left:5px;
+}
+label {
+    display: inline-block;
+    width: 150px;
 }

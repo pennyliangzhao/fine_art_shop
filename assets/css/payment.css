@@ -75,6 +75,7 @@ label {
     border-radius: 3px;
     cursor: pointer;
     font-size: 17px;
+    text-align: center;
 }
 
 .btn:hover {
@@ -95,16 +96,73 @@ span.price {
 }
 .checkout{
     color:white;
+    margin-left: 50px;
 }
 .container1{
     background-image: url("../images/footerimage.jfif");
+    margin:auto;
 }
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+
 @media (max-width: 800px) {
     .row {
         flex-direction: column-reverse;
     }
+
     .col-25 {
         margin-bottom: 20px;
     }
 }
+label {
+    display: inline-block;
+    width: 150px;
+}
+/* Header Style */
+.navbar .navbar-brand {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 25px 0px;
+    margin:auto;
+
+}
+
+.bg-dark {
+    background-image: url("../images/footerimage.jfif");
+    margin-right:350px;
+}
+
+#navbarResponsive {
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 105px;
+    transform: translateX(-50%);
+}
+
+.navbar-dark .navbar-nav .nav-item {
+    margin: 0px 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    /*color: #FFB6C1;*/
+    transition: all 0.5s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+    color: #FFB6C1;
+}
+
+
+
+
+
+
+
+

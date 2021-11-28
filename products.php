@@ -31,15 +31,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
-                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('login').style.display='block'">Login-->
-                <!--                </button>-->
-                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign up-->
-                <!--                </button>-->
-<!--                <button class="nav-bar-buttons"-->
-<!--                onclick="document.getElementById('id03').style.display='block'" style="width:auto;">-->
-<!--                Shopping Cart-->
-<!--                </button>-->
                 <?php include("cartbutton.php");?>
             </div>
         </div>
@@ -51,13 +42,14 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
             <!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.php">Home
-                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="products.php">Products</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="products.php">Products
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.php">About </a>

@@ -171,18 +171,11 @@ session_start();
                             ?>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Footer Starts Here -->
 <div class="footer">
     <div class="container">
         <div class="row">
-            <!--                                <div class="col-md-12">-->
-            <!--                                </div>-->
             <div class="col-md-12">
                 <div class="footer-menu">
                     <ul>
@@ -225,8 +218,8 @@ session_start();
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="scripts/login.js"></script>
-<script src="scripts/signup.js"></script>
+<script src="vendor/scripts/login.js"></script>
+<script src="vendor/scripts/signup.js"></script>
 
 </body>
 

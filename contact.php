@@ -30,14 +30,6 @@
         <div class="row">
             <div class="col-md-12">
                 <?php include("cartbutton.php");?>
-                <!--                <input type="text" placeholder="Search..">-->
-                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('login').style.display='block'">Login-->
-                <!--                </button>-->
-                <!--                <button class="nav-bar-buttons" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign up-->
-                <!--                </button>-->
-                <!--                <button class="nav-bar-buttons"-->
-                <!--                "onclick="document.getElementById('shopping_cart').style.display='block'" style="width:auto;">-->
-                <!--                Shopping Cart<i class="fa fa-shopping-cart"></i>-->
                 </button>
             </div>
         </div>
@@ -86,15 +78,8 @@
             </div>
             <div class="col-md-6">
                 <div id="map">
-                    <!-- How to change your own map point
-                           1. Go to Google Maps
-                           2. Click on your location point
-                           3. Click "Share" and choose "Embed map" tab
-                           4. Copy only URL and paste it within the src="" field below
-                    -->
-
-                    <iframe src="https://www.google.com/maps/embed?pb=yJa36uHwU8fSxTdw8" width="100%" height="500px"
-                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.7734015080146!2d174.77659841542282!3d-41.292035879273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38af8d0abe1203%3A0xfd7f853ecf721dc1!2sWellington%20ICT%20Graduate%20School!5e0!3m2!1sen!2snz!4v1638078266965!5m2!1sen!2snz"
+                            width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe><br>
                 </div>
             </div>
             <div class="col-md-6">

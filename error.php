@@ -39,7 +39,6 @@ session_start();
                                    placeholder="Username">
                         </div>
                         <div class="row">
-                            <!-- <span class="fa fa-lock"></span> -->
                             <input type="password" name="psw" id="password" class="form__input"
                                    placeholder="Password">
                         </div>

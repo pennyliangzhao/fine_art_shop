@@ -40,7 +40,6 @@
 <div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-            <!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home
@@ -224,7 +223,7 @@
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/custom.js"></script>
+
 
 </body>
 

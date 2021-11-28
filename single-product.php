@@ -109,14 +109,6 @@ if(!isset($_SESSION['username'])) {
                     ' <div class="categories">'.
                     ' <h6>Category: '.$row['categories'].'</h6>';
                     ?>
-<!--                    ?>-->
-<!--                    <h4>Surfboards</h4>-->
-<!--                    <h6>$15.00</h6>-->
-<!--                    <p> Penny crafted an art piece that captures the essence of a fun and hot summer. The green pastel-->
-<!--                        tones are reminicent of a cool, calm drink in a hot humid climate - a reflection of Penny's life-->
-<!--                        in Fiji and move back to New Zealand for a Summer Christmas. </p>-->
-<!--                    <span>7 left on stock</span>-->
-
 
                         </div>
                         <div class="share">

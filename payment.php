@@ -18,7 +18,6 @@ if(!isset($_SESSION['username'])) {
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-<!--    <link rel="stylesheet" href="assets/css/main.css">-->
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/signup.css">
 </head>
@@ -27,7 +26,6 @@ if(!isset($_SESSION['username'])) {
 <div>
     <div class="container1">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-            <!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home
@@ -48,8 +46,8 @@ if(!isset($_SESSION['username'])) {
                     <form action="/action_page.php">
                 <li class="nav-item">
             </ul>
-    </div>
-    </nav>
+     </nav>
+  </div>
 </div>
 
 
@@ -118,23 +116,15 @@ if(!isset($_SESSION['username'])) {
                 <input id="checkout" value="Continue to checkout" class="btn">
                 </form>
             </div>
-        </div>
-        <!--    <div class="col-25">-->
-        <!--        <div class="container">-->
-        <!--            <p><a href="#">Product 1</a> <span class="price">$15</span></p>-->
-        <!--            <p><a href="#">Product 2</a> <span class="price">$5</span></p>-->
-        <!--            <p><a href="#">Product 3</a> <span class="price">$8</span></p>-->
-        <!--            <p><a href="#">Product 4</a> <span class="price">$2</span></p>-->
-        <!--            <hr>-->
-        <!--            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>-->
-        <!--        </div>-->
-        <!--    </div>-->
+          </div>
     </div>
 </div>
+</div>
+
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="scripts/login.js"></script>
-<script src="scripts/signup.js"></script>
+<script src="vendor/scripts/login.js"></script>
+<script src="vendor/scripts/signup.js"></script>
 <script src="vendor/scripts/order-product.js"></script>
 </body>
 </html>
